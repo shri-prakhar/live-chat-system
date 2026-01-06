@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "rootDir":"src",
+    "outDir": "dist",
+    "incremental": true,
+    "composite": true,
+    "declaration": true,      // generates .d.ts files
+    "declarationMap": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "verbatimModuleSyntax": false,
+    "noEmit": false,
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "extends": "../../packages/typescript-config/base.json",
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
